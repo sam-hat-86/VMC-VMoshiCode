@@ -86,7 +86,7 @@ ol li, ul li{margin-bottom:14px}
 
 /* Download link box */
 .linkBox{display:inline-flex;align-items:center;gap:14px;padding:14px 18px;border-radius:12px;background:linear-gradient(90deg,var(--color-primary),var(--color-primary-strong));color:#fff;box-shadow:0 6px 16px rgba(0,87,184,0.12)}
-.linkBox img{width:56px;height:56px;object-fit:contain;border-radius:8px;background:rgba(255,255,255,0.06);padding:8px}
+.linkBox img{width:64px;height:64px;object-fit:contain;border-radius:8px;background:rgba(255,255,255,0.06);padding:0px;}
 .linkBox span{font-weight:700;font-size:1rem}
 
 /* Accessible focus states */
