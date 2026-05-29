@@ -21,12 +21,12 @@ document.addEventListener('DOMContentLoaded', function(){
 				// set a readable label inside the link if a span exists
 				var span = a.querySelector('span');
 				if(span){
-					span.textContent = filenameFromUrl(url);
+					span.textContent = filenameFromUrl(url)+"をダウンロード";
 				}
 				// also update aria-label if present on inner container
 				var container = a.querySelector('[role="link"]');
 				if(container){
-					container.setAttribute('aria-label', filenameFromUrl(url));
+					container.setAttribute('aria-label', filenameFromUrl(url)+"をダウンロード");
 				}
 			}
 		});
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			if(!key) return;
 			var url = SITE_LINKS[key];
 			if(url){
-				el.textContent = filenameFromUrl(url);
+				el.textContent = filenameFromUrl(url)+"をダウンロード";
 			}
 		});
 	})();
