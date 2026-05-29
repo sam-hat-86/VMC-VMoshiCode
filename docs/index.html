@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="ja">
 
 <head>
@@ -6,15 +7,23 @@
     <link rel="icon" href="icon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
     <title>VMCの使い方</title>
+    <meta name="description" content="VMC（V_moshi_code）のダウンロード・インストール・使い方とFAQ。志望校コードの正引き・逆引きに対応しています。">
 </head>
 
 <body>
-    <header class="site-header">
-        <h1 class="sr-only">VMCの使い方</h1>
+    <a class="skip-link" href="#main">本文へスキップ</a>
+
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <h1>VMCの使い方</h1>
+            <p class="site-subtitle">志望校コードの正引き・逆引きツール</p>
+        </div>
     </header>
-        <!-- 目次（ノート風に本文内へ） -->
-        <aside class="note note-toc" aria-label="目次">
-            <h3 class="note-title">目次</h3>
+
+    <main id="main" role="main" tabindex="-1">
+
+        <aside class="note note-toc" aria-labelledby="toc-label">
+            <h2 id="toc-label" class="note-title">目次</h2>
             <ul class="toc">
                 <li><a href="#introduction">はじめに</a></li>
                 <li><a href="#installation">インストール・準備</a></li>
@@ -22,78 +31,88 @@
                 <li><a href="#faq">FAQ</a></li>
             </ul>
         </aside>
-    <!-- コンテンツ -->
-    <main id="main" role="main">
-        <section id="introduction">
-            <h2>はじめに</h2>
-            <p> VMC（V_moshi_code）は、大阪進研の進研Vもしで使用する志望校コードを検索するツールです。 </p>
-            <p>正引き(コードから学校名)と逆引き(学校名からコード)の両方に対応しています。</p>
-            <p>また、<strong>たまに使えなくなる</strong>ことがあるスクリーンショット機能を搭載しており、印刷して紙での管理・確認も可能です。</p>
-        </section>
 
-            <section id="installation">
-            <h2>インストール・準備</h2>
-            <p>まずは、以下からVMCをダウンロードします。</p>
-            <a class="download-link" href="https://github.com/sam-hat-86/VMC-VMoshiCode/raw/refs/heads/main/VMC-VMoshiCode2605.xlsm" rel="noopener">
-                <div class="linkBox" role="link" aria-label="VMC-VMoshiCode をダウンロード">
-                    <img src="icon.png" alt="VMC アイコン" />
-                    <span>VMC-VMoshiCodeをダウンロード</span>
-                </div>
-            </a>
-            <hr>
-            <p>ダウンロードしたファイルはマクロの使用制限があるので、マクロを有効にする必要があります。 </p>
-            <p>マクロを有効にする方法は、Excelのバージョンやセキュリティ設定によって異なりますが、一般的には以下の手順で行います。</p>
-            <ol>
-                <li>Excelを開き、ダウンロードしたVMC-VMoshiCodeファイルを開きます。</li>
-                <li>セキュリティ警告が表示された場合、「コンテンツの有効化」または「マクロを有効にする」をクリックします。</li>
-                <li>必要に応じて、信頼できる場所にファイルを移動することも検討してください。</li>
-            </ol>
-        </section>
+        <article>
+            <section id="introduction" aria-labelledby="h-intro">
+                <h2 id="h-intro">はじめに</h2>
+                <p>VMC（V_moshi_code）は、大阪進研の進研Vもしで使用する志望校コードを検索するツールです。</p>
+                <p>正引き(コードから学校名)と逆引き(学校名からコード)の両方に対応しています。</p>
+                <p>また、<strong>たまに使えなくなる</strong>ことがあるスクリーンショット機能を搭載しており、印刷して紙での管理・確認も可能です。</p>
+            </section>
 
-        <section id="usage">
-            <h2>使い方</h2>
-            <p>VMCの使い方について説明します。</p>
-            <h3>正引き（コードから学校名）</h3>
-            <ol>
-                <li>VMC-VMoshiCodeファイルを開きます。</li>
-                <li>黄色の「コードで検索」をクリックします。</li>
-                <li>表示された画面の中学校・第１～６志望の欄にコードを入力します。</li>
-                <li>画面右の「検索」ボタンをクリックします。</li>
-                <li>入力したコードに対応する学校名が表示されます。</li>
-                <li>任意で、「スクショ」ボタンをクリックしてスクリーンショットを撮影できます。<br>
-                    画像は、VMCのファイルと同じ場所のvもしpicというフォルダに保存されます。「保存場所」ボタンで開けます。</li>
-            </ol>
+            <section id="installation" aria-labelledby="h-install">
+                <h2 id="h-install">インストール・準備</h2>
+                <p>まずは、以下からVMCをダウンロードします。</p>
+                <a class="download-link" href="https://github.com/sam-hat-86/VMC-VMoshiCode/raw/refs/heads/main/VMC-VMoshiCode2605.xlsm" rel="noopener">
+                    <div class="linkBox" role="link" aria-label="VMC-VMoshiCode をダウンロード">
+                        <img src="icon.png" alt="VMC アイコン" />
+                        <span>VMC-VMoshiCodeをダウンロード</span>
+                    </div>
+                </a>
+                <hr />
+                <p>ダウンロードしたファイルはマクロの使用制限があるので、マクロを有効にする必要があります。</p>
+                <p>マクロを有効にする方法は、Excelのバージョンやセキュリティ設定によって異なりますが、一般的には以下の手順で行います。</p>
+                <ol>
+                    <li>Excelを開き、ダウンロードしたVMC-VMoshiCodeファイルを開きます。</li>
+                    <li>セキュリティ警告が表示された場合、「コンテンツの有効化」または「マクロを有効にする」をクリックします。</li>
+                    <li>必要に応じて、信頼できる場所にファイルを移動することも検討してください。</li>
+                </ol>
+            </section>
 
-            <h3>逆引き（学校名からコード）</h3>
-            <ol>
-                <li>VMC-VMoshiCodeファイルを開きます。</li>
-                <li>青の「学校名で検索」をクリックします。</li>
-                <li> 表示された画面の①にある中学校・第１～６志望のいずれかの欄を選択します。 </li>
-                <li>画面中央上部の②の欄に中学校であれば市区町村名を、高校であれば高校名を入力します。</li>
-                <li>検索結果がその下の黄色い欄に表示されるので、クリックします。</li>
-                <li>続けて③の黄色い欄に中学校であれば中学校名が、高校であればコース名が表示されるので、クリックします。</li>
-                <li>画面右下にある④の登録ボタンをクリックすると、①の項目欄のかっこ[]内にコードが表示されます。 </li>
-            </ol>
-        </section>
+            <section id="usage" aria-labelledby="h-usage">
+                <h2 id="h-usage">使い方</h2>
+                <p>VMCの使い方について説明します。</p>
+                <h3>正引き（コードから学校名）</h3>
+                <ol>
+                    <li>VMC-VMoshiCodeファイルを開きます。</li>
+                    <li>黄色の「コードで検索」をクリックします。</li>
+                    <li>表示された画面の中学校・第１～６志望の欄にコードを入力します。</li>
+                    <li>画面右の「検索」ボタンをクリックします。</li>
+                    <li>入力したコードに対応する学校名が表示されます。</li>
+                    <li>任意で、「スクショ」ボタンをクリックしてスクリーンショットを撮影できます。
+                        画像は、VMCのファイルと同じ場所のvもしpicというフォルダに保存されます。「保存場所」ボタンで開けます。</li>
+                </ol>
 
-            <section id="faq">
-            <h2>FAQ</h2>
-            <p>よくある質問とその回答を掲載しています。</p>
-            <dl>
-                <dt><strong>Q: 印刷方法は？</strong></dt>
-                <dd>
-                    「コードで検索」の画面でスクリーンショットを撮影すれば、png形式の画像が保存されるので、それを印刷してください。保存場所は、VMCのファイルと同じ場所のvもしpicというフォルダです。「保存場所」ボタンで開けます。フォルダーの写真を選択→右クリック→印刷で印刷用画面が表示されます。
-                </dd>
+                <h3>逆引き（学校名からコード）</h3>
+                <ol>
+                    <li>VMC-VMoshiCodeファイルを開きます。</li>
+                    <li>青の「学校名で検索」をクリックします。</li>
+                    <li>表示された画面の①にある中学校・第１～６志望のいずれかの欄を選択します。</li>
+                    <li>画面中央上部の②の欄に中学校であれば市区町村名を、高校であれば高校名を入力します。</li>
+                    <li>検索結果がその下の黄色い欄に表示されるので、クリックします。</li>
+                    <li>続けて③の黄色い欄に中学校であれば中学校名が、高校であればコース名が表示されるので、クリックします。</li>
+                    <li>画面右下にある④の登録ボタンをクリックすると、①の項目欄のかっこ[]内にコードが表示されます。</li>
+                </ol>
+            </section>
 
-                <dt><strong>Q: 印刷の設定を変更したい</strong></dt>
-                <dd>
-                    上記方法で印刷画面まで表示した後、画面右側に印刷レイアウトが複数表示されます。その中から、好みのレイアウト(2in1、4in1など)を選択して印刷してください。画像が拡大されて端が見切れる場合は、「写真をフレームに合わせる」のチェックを変更してみてください。
-                </dd>
+            <section id="faq" aria-labelledby="h-faq">
+                <h2 id="h-faq">FAQ</h2>
+                <p>よくある質問とその回答を掲載しています。</p>
+                <dl>
+                    <dt><strong>Q: 印刷方法は？</strong></dt>
+                    <dd>
+                        「コードで検索」の画面でスクリーンショットを撮影すれば、png形式の画像が保存されるので、それを印刷してください。保存場所は、VMCのファイルと同じ場所のvもしpicというフォルダです。「保存場所」ボタンで開けます。フォルダーの写真を選択→右クリック→印刷で印刷用画面が表示されます。
+                    </dd>
 
-                <dt><strong>Q: スクリーンショット機能が使えない</strong></dt>
-                <dd>
-                    スクリーンショット機能は、Excelのバージョンやセキュリティ設定によっては正常に動作しないことがあります。その場合は、手動でスクリーンショットを撮るか、印刷機能を使用して紙で管理することをおすすめします。
-                </dd>
-            </dl>
-        </section>
+                    <dt><strong>Q: 印刷の設定を変更したい</strong></dt>
+                    <dd>
+                        上記方法で印刷画面まで表示した後、画面右側に印刷レイアウトが複数表示されます。その中から、好みのレイアウト(2in1、4in1など)を選択して印刷してください。画像が拡大されて端が見切れる場合は、「写真をフレームに合わせる」のチェックを変更してみてください。
+                    </dd>
+
+                    <dt><strong>Q: スクリーンショット機能が使えない</strong></dt>
+                    <dd>
+                        スクリーンショット機能は、Excelのバージョンやセキュリティ設定によっては正常に動作しないことがあります。その場合は、手動でスクリーンショットを撮るか、印刷機能を使用して紙で管理することをおすすめします。
+                    </dd>
+                </dl>
+            </section>
+        </article>
+
     </main>
+
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <p>© VMC-VMoshiCode — ドキュメント</p>
+        </div>
+    </footer>
+</body>
+</html>
