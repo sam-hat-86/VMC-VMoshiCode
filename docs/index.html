@@ -11,18 +11,10 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#main">本文へスキップ</a>
-
-    <header class="site-header" role="banner">
-        <div class="header-inner">
-            <h1>VMCの使い方</h1>
-            <p class="site-subtitle">志望校コードの正引き・逆引きツール</p>
-        </div>
-    </header>
-
     <main id="main" role="main" tabindex="-1">
 
         <aside class="note note-toc" aria-labelledby="toc-label">
+        <h1>VMCの使い方</h1>
             <h2 id="toc-label" class="note-title">目次</h2>
             <ul class="toc">
                 <li><a href="#introduction">はじめに</a></li>
@@ -43,15 +35,16 @@
             <section id="installation" aria-labelledby="h-install">
                 <h2 id="h-install">インストール・準備</h2>
                 <p>まずは、以下からVMCをダウンロードします。</p>
-                <a class="download-link" href="https://github.com/sam-hat-86/VMC-VMoshiCode/raw/refs/heads/main/VMC-VMoshiCode2605.xlsm" rel="noopener">
-                    <div class="linkBox" role="link" aria-label="VMC-VMoshiCode をダウンロード">
-                        <img src="icon.png" alt="VMC アイコン" />
-                        <span>VMC-VMoshiCodeをダウンロード</span>
-                    </div>
-                </a>
+                <!-- download link (managed via script) -->
+                    <a class="download-link" href="#" rel="noopener" data-link-key="vmcDownload">
+                        <div class="linkBox" role="link" aria-label="VMC-VMoshiCode をダウンロード">
+                            <img src="icon.png" alt="VMC アイコン" />
+                            <span>VMC-VMoshiCodeをダウンロード</span>
+                        </div>
+                    </a>
                 <hr />
                 <p>ダウンロードしたファイルはマクロの使用制限があるので、マクロを有効にする必要があります。</p>
-                <p>マクロを有効にする方法は、Excelのバージョンやセキュリティ設定によって異なりますが、一般的には以下の手順で行います。</p>
+                <p>マクロを有効にする方法は、一般的には以下の手順で行います。</p>
                 <ol>
                     <li>Excelを開き、ダウンロードしたVMC-VMoshiCodeファイルを開きます。</li>
                     <li>セキュリティ警告が表示された場合、「コンテンツの有効化」または「マクロを有効にする」をクリックします。</li>
@@ -61,7 +54,6 @@
 
             <section id="usage" aria-labelledby="h-usage">
                 <h2 id="h-usage">使い方</h2>
-                <p>VMCの使い方について説明します。</p>
                 <h3>正引き（コードから学校名）</h3>
                 <ol>
                     <li>VMC-VMoshiCodeファイルを開きます。</li>
@@ -70,7 +62,9 @@
                     <li>画面右の「検索」ボタンをクリックします。</li>
                     <li>入力したコードに対応する学校名が表示されます。</li>
                     <li>任意で、「スクショ」ボタンをクリックしてスクリーンショットを撮影できます。
-                        画像は、VMCのファイルと同じ場所のvもしpicというフォルダに保存されます。「保存場所」ボタンで開けます。</li>
+                        画像は、VMCのファイルと同じ場所のvもしpicというフォルダに保存されます。<br>「保存場所」ボタンで開けます。</li>
+                    <li>学校を変更したい場合は、「学校変更」ボタンで変更できます。<br>使い方は、以下の逆引きの手順です。<strong>閉じるときだけ、「適用して閉じる」にしないと反映されません。</strong>
+                    </li>
                 </ol>
 
                 <h3>逆引き（学校名からコード）</h3>
@@ -91,28 +85,24 @@
                 <dl>
                     <dt><strong>Q: 印刷方法は？</strong></dt>
                     <dd>
-                        「コードで検索」の画面でスクリーンショットを撮影すれば、png形式の画像が保存されるので、それを印刷してください。保存場所は、VMCのファイルと同じ場所のvもしpicというフォルダです。「保存場所」ボタンで開けます。フォルダーの写真を選択→右クリック→印刷で印刷用画面が表示されます。
+                        「コードで検索」のスクリーンショット(png形式の画像)を印刷してください。<br>保存場所は、「保存場所」ボタンで開けます(VMCのファイルと同じ場所のvもしpicというフォルダ)。<br>フォルダーの写真を選択→右クリック→印刷で印刷用画面が表示されます。
                     </dd>
 
                     <dt><strong>Q: 印刷の設定を変更したい</strong></dt>
                     <dd>
-                        上記方法で印刷画面まで表示した後、画面右側に印刷レイアウトが複数表示されます。その中から、好みのレイアウト(2in1、4in1など)を選択して印刷してください。画像が拡大されて端が見切れる場合は、「写真をフレームに合わせる」のチェックを変更してみてください。
+                        上記方法で印刷画面まで表示した後、画面右側に印刷レイアウトが複数表示されます。<br>その中から、好みのレイアウト(2in1、4in1など)を選択して印刷してください。<br>画像が拡大されて端が見切れる場合は、「写真をフレームに合わせる」のチェックを変更してみてください。
                     </dd>
 
                     <dt><strong>Q: スクリーンショット機能が使えない</strong></dt>
                     <dd>
-                        スクリーンショット機能は、Excelのバージョンやセキュリティ設定によっては正常に動作しないことがあります。その場合は、手動でスクリーンショットを撮るか、印刷機能を使用して紙で管理することをおすすめします。
+                        スクリーンショット機能は、Excelのバージョンやセキュリティ設定によっては正常に動作しないことがあります。<br>その場合は、手動でスクリーンショットを撮るか、印刷機能を使用して紙で管理することをおすすめします。
                     </dd>
                 </dl>
             </section>
         </article>
 
     </main>
-
-    <footer role="contentinfo">
-        <div class="footer-inner">
-            <p>© VMC-VMoshiCode — ドキュメント</p>
-        </div>
-    </footer>
+    <script src="script.js" defer></script>
 </body>
+
 </html>

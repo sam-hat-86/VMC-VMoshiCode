@@ -9,7 +9,7 @@
     --muted: #45586a;
     --radius: 12px;
     --gap: 20px;
-    --base-font-size: 18px;
+    --base-font-size: 18px; /* 少し小さめに調整 */
 }
 
 *{box-sizing:border-box}
@@ -19,29 +19,34 @@ body{
     margin:0;
     font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","メイリオ","Segoe UI",Roboto,"Noto Sans JP",sans-serif;
     font-size:var(--base-font-size);
-    line-height:1.85;
+    line-height:1.9;
     color:var(--text);
     background-color:var(--color-bg);
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
-    padding:48px;
+    padding:12px;
 }
 
 /* Container */
 main{
-    max-width:980px; /* desktop-friendly readable measure */
+    width:100%; /* 全幅表示に変更 */
     margin:0 auto;
-    padding:36px 24px;
+    padding:12px 12px;
+    display:grid;
+    grid-template-columns: 300px 1fr;
+    gap:28px;
 }
 
 /* Note-style table of contents (inline) */
 .note{
     background:linear-gradient(180deg,#fff,#fbfdff);
     border-left:8px solid var(--color-primary);
-    padding:16px 18px;
+    padding:18px 16px;
     border-radius:10px;
-    box-shadow:0 6px 18px rgba(2,6,23,0.06);
-    margin-bottom:22px;
+    box-shadow:0 8px 24px rgba(2,6,23,0.06);
+    margin:0; /* グリッド内で扱うため余白は調整 */
+    align-self:start;
+    position:sticky;
 }
 .note-title{margin:0 0 10px;font-size:1rem;color:var(--color-primary-strong);font-weight:700}
 .note-toc .toc{display:flex;flex-direction:column;gap:10px;padding:0;margin:0;list-style:none}
@@ -54,10 +59,26 @@ main{
 /* Sections */
 section{background:var(--color-surface);padding:28px;margin-bottom:28px;border-radius:14px;box-shadow:0 3px 10px rgba(2,6,23,0.04)}
 
-h2{font-size:1.6rem;margin:0 0 18px;color:var(--color-primary-strong)}
-h3{font-size:1.15rem;margin:10px 0;color:var(--color-primary)}
+h1{font-size:2.4rem;margin:0 0 10px;color:var(--color-primary-strong)}
+h2{font-size:1.9rem;margin:0 0 18px;color:var(--color-primary-strong)}
+h3{font-size:1.2rem;margin:10px 0;color:var(--color-primary)}
 
 p{margin:0 0 18px;color:var(--muted);font-size:1rem}
+
+/* Download link を強調 */
+.linkBox{display:inline-flex;align-items:center;gap:16px;padding:16px 20px;border-radius:12px;background:linear-gradient(90deg,var(--color-primary),var(--color-primary-strong));color:#fff;box-shadow:0 8px 20px rgba(0,87,184,0.14)}
+.linkBox img{width:72px;height:72px;object-fit:contain;border-radius:10px;background:rgba(255,255,255,0.06);padding:10px}
+.linkBox span{font-weight:800;font-size:1.05rem}
+
+/* セクション内を広めにして読みやすく */
+section{padding:36px}
+
+/* 高さのある目次リンク */
+.toc a{padding:10px 12px}
+
+/* フォーカスとアクセシビリティの強化 */
+a:focus-visible,button:focus-visible,[role="link"]:focus-visible{outline:3px solid #fff;box-shadow:0 0 0 8px rgba(0,87,184,0.12);outline-offset:3px}
+
 
 /* Lists inside main */
 main ol, main ul{margin:0 0 22px 1.6rem;padding-left:0}
@@ -80,7 +101,7 @@ strong{color:var(--text);font-weight:700}
 /* Print */
 @media print{
     body{background:#fff;color:#000}
-    nav,.skip-link{display:none}
+    nav{display:none}
     section{box-shadow:none;border-radius:0}
 }
 
